@@ -1,0 +1,151 @@
+:root {
+  --VerydarkblueMainbackground: hsl(233, 47%, 7%);
+  --cardbackground: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --mainheadingstats: hsl(0, 0%, 100%);
+  --mainparagraph: hsla(0, 0%, 100%, 0.75);
+  --statheadings: hsla(0, 0%, 100%, 0.6);
+  /* Fonts*/
+  --font1: "Bricolage Grotesque", sans-serif;
+  --font2: "Inter", sans-serif;
+  --font3: "Kumbh Sans", sans-serif;
+  --font4: "Lexend Deca", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+/* ====================================================================== */
+
+body {
+  background-color: var(--VerydarkblueMainbackground);
+  color: var(--mainheadingstats);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  background-color: var(--cardbackground);
+  height: 65%;
+  width: 75%;
+  display: flex;
+  border-radius: 15px;
+}
+.details {
+  width: 50%;
+  padding: 4vw;
+  font-family: var(--font2);
+}
+.image {
+  width: 70%;
+  position: relative;
+}
+.gradient {
+  height: 100%;
+  width: 100%;
+  background-color: hsla(278, 98%, 23%, 0.669);
+  border-radius: 0 15px 15px 0;
+  position: absolute;
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+span {
+  color: var(--accent);
+}
+h1 {
+  font-size: 2.8vw;
+  margin: 1.2vw 0;
+}
+p {
+  color: var(--mainparagraph);
+  font-size: 1.3vw;
+  line-height: 2vw;
+  font-weight: 400;
+  margin-right: 5vw;
+  margin-bottom: 2vw;
+}
+.stats {
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+}
+
+h3 {
+  display: inline;
+  padding: 2.5vw;
+  font-size: 1.5vw;
+  text-transform: uppercase;
+}
+.subdetails {
+  font-size: 1vw;
+  color: var(--mainparagraph);
+  text-transform: uppercase;
+  padding: 1.5vw;
+  font-weight: 400;
+}
+
+/* ====================================================================== */
+/* MEDIA QUERY */
+/* ====================================================================== */
+
+@media (max-width: 600px) {
+  main {
+    flex-direction: column;
+    height: 100vh;
+    width: 90vw;
+  }
+  .image {
+    order: -1;
+    width: 100%;
+    height: 30%;
+  }
+  img {
+    border-radius: 10px 10px 0 0;
+  }
+  .gradient {
+    border-radius: 10px 10px 0 0;
+  }
+  .details {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 8vw;
+    padding: 4vw;
+  }
+  p {
+    padding: 2vw;
+    margin-left: 2vw;
+    font-size: 4.5vw;
+    line-height: 8vw;
+  }
+  .stats {
+    display: flex;
+    flex-direction: column;
+  }
+  h3 {
+    font-size: 7vw;
+  }
+  .subdetails {
+    text-align: center;
+    font-size: 3.5vw;
+    margin-bottom: 3vw;
+    font-weight: 200;
+  }
+}
